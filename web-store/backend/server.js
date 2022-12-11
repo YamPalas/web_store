@@ -6,9 +6,9 @@ const app = express();
 const port = 5001;
 mongoose.set("strictQuery", false);
 
-mongoose.connect("mongodb://localhost:27015/webStore");
+mongoose.connect("mongodb://localhost:27017/web_store");
 mongoose.connection.on("connected", () => console.log("Connected"));
-mongoose.connection.on("error", () =>
+mongoose.connection.on("error", (err) =>
   console.log("Connection failed with - ", err)
 );
 
