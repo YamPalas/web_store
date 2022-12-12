@@ -22,6 +22,6 @@ router.post("/product", (request, response) => {
   //code to perform particular action.
   //To access POST variable use req.body()methods.
   console.log(request.body);
-});
+});reload
 
 module.exports = router;
