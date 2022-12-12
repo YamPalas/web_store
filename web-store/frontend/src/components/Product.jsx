@@ -6,7 +6,7 @@ import "../style/ProducstList.css";
 function Product({ pName, price, id, img, cart, updateCart }) {
   const [name, setName] = useState("");
   const addToCart = () => {
-    updateCart([...cart, { name: name, id: id }]);
+    updateCart([...cart, { name: name, price: price, key: id, amount: 0 }]);
   };
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function Product({ pName, price, id, img, cart, updateCart }) {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{price}₪</Card.Text>
-          <Button variant="dark" onClick={addToCart}>
+          <Button variant="success" onClick={addToCart}>
             Add me to cart
           </Button>
         </Card.Body>
