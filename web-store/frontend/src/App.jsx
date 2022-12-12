@@ -3,11 +3,20 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ProductsList from "./components/ProductsList";
 import CartButton from "./components/CartButton";
 import CartPage from "./components/CartPage";
-import products from "./data/products.json";
+import { getProducts } from "./api";
 import "./App.css";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchMyApi() {
+      const res = await getProducts();
+      setProducts(res.data);
+    }
+    fetchMyApi();
+  }, []);
 
   return (
     <Router>

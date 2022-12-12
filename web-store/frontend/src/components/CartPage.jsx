@@ -48,7 +48,6 @@ function CartPage({ cart, updateCart }) {
                   <Button
                     variant="danger"
                     onClick={(e) => removeMe(product.key)}
-                    width={50%}
                   >
                     <h6>
                       <TiBackspaceOutline />
