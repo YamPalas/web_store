@@ -1,7 +1,12 @@
 .cart {
   float: left;
   margin: 1%;
-  text-align: center;
+}
+
+.newProduct {
+  float:left;
+  margin-top: 15px;
+  /* margin-left: -60px; */
 }
 
 .title {

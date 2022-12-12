@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ProductsList from "./components/ProductsList";
 import CartButton from "./components/CartButton";
+import NewProductButton from "./components/newProductButton";
 import CartPage from "./components/CartPage";
+import AddProduct from "./components/AddProduct";
 import { getProducts } from "./api";
 import "./App.css";
 
@@ -27,6 +29,7 @@ function App() {
           element={
             <div className="App">
               <CartButton cart={cart} />
+              <NewProductButton />
               <ProductsList list={products} cart={cart} updateCart={setCart} />
             </div>
           }
@@ -35,6 +38,11 @@ function App() {
           exact
           path="/Payment"
           element={<CartPage cart={cart} updateCart={setCart} />}
+        ></Route>
+        <Route
+          exact
+          path="/AddProduct"
+          element={<AddProduct />}
         ></Route>
       </Routes>
     </Router>

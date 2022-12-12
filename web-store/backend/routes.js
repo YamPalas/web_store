@@ -1,12 +1,18 @@
 const products = require("./data/products.json");
 const express = require("express");
-// const Product = require("./models/product"); // new
+const Product = require("./models/product"); // new
 const router = express.Router();
 // Get all posts
-router.get("/products", async (req, res) => {
-  // const products = await Product.find();
+router.get("/products2", async (req, res) => {
+  const products = await Product.find();
   res.send(products);
 });
+
+// router.get("/mongo", async (req, res) => {
+//   // const products = await Product.find();
+//   res.send(products);
+// });
+
 
 router.get("/ping", async (req, res) => {
   res.send("pong");
