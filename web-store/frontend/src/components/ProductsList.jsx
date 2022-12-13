@@ -11,8 +11,8 @@ function ProductsList({ list, cart, updateCart }) {
             pName={product.productName}
             price={product.price}
             img={product.image}
-            key={product.id}
-            id={product.id}
+            key={product._id}
+            id={product._id}
             cart={cart}
             updateCart={updateCart}
           />

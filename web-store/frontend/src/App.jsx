@@ -18,7 +18,7 @@ function App() {
       setProducts(res.data);
     }
     fetchMyApi();
-  }, []);
+  }, [cart]);
 
   return (
     <Router>
@@ -42,7 +42,7 @@ function App() {
         <Route
           exact
           path="/AddProduct"
-          element={<AddProduct />}
+          element={<AddProduct cart={cart} updateCart={setCart}/>}
         ></Route>
       </Routes>
     </Router>

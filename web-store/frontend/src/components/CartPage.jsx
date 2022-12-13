@@ -11,7 +11,6 @@ function CartPage({ cart, updateCart }) {
     const index = cart.indexOf(found);
     cart.splice(index, 1);
     setSum(sum - found.price);
-    // const newCart = cart.filter((product) => product.key !== id);
     updateCart([...cart]);
   };
 
